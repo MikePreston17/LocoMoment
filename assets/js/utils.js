@@ -12,3 +12,12 @@ firebase.initializeApp(config);
 var db = firebase.database();
 const root = db.ref();
 const trains = root.child('trains');
+
+
+const isNullOrEmpty = target => {
+    for (var member in target) {
+        if (target[member] == null || target[member] == '')
+            return true;
+    }
+    return false;
+}
