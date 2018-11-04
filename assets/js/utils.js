@@ -10,3 +10,5 @@ var config = {
 firebase.initializeApp(config);
 
 var db = firebase.database();
+const root = db.ref();
+const trains = root.child('trains');
